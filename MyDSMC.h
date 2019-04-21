@@ -10,8 +10,9 @@
 
 class MyDSMC {
 public:
-    MyDSMC(particles& Part);
+    MyDSMC(particles& Part, double kn);
     int collision(particles& Part);
+    void output_data(int nstep, particles Part);
 
 private:
     double rgas;

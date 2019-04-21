@@ -4,10 +4,14 @@
 #include <cmath>
 #include <random>
 #include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <iomanip>
 
 #include "MyDSMC.h"
 
-MyDSMC::MyDSMC (particles& Part) {
+MyDSMC::MyDSMC (particles& Part, double kn) {
     rgas = 287.0;
     dx = 1.0;
     dy = 1.0;
@@ -16,7 +20,7 @@ MyDSMC::MyDSMC (particles& Part) {
     d = 0.1;
     vref = sqrt(2.0*rgas*t0);
     tref = d / vref;
-    akn = 0.4;
+    akn = kn;
 
     //Gmaxを定義する
     fgmax = 10.0;
@@ -27,7 +31,8 @@ MyDSMC::MyDSMC (particles& Part) {
     double dtc = 0.2*akn;
 
     dt = fmin(dtv, dtc);
-    ns = 500000;
+    std::cout << "dt: " << dt << std::endl;
+    ns = 5000000;
 
     col = fgmax*dt / (4.0*area * static_cast<double>(ns)*akn);
 
@@ -49,6 +54,7 @@ MyDSMC::MyDSMC (particles& Part) {
 
 int MyDSMC::collision(particles& Part)
 {
+//    std::cout << dt*tref << std::endl;
     //粒子数
     double n_all = static_cast<double>(ns) * area;
     //最大衝突数の設定
@@ -118,4 +124,19 @@ double MyDSMC::uniform_random()
     static std::uniform_real_distribution<double> dist(0.0, 1.0);
 
     return dist(mt);
+}
+
+void MyDSMC::output_data(int nstep, particles Part){
+    //　ファイル名指定
+    std::ostringstream kn_temp;
+    int digits = 1;
+    kn_temp << std::fixed << std::setprecision(digits) << akn;
+    std::string kn_name = kn_temp.str();
+    kn_name.erase(kn_name.begin() + 1);
+    std::cout << kn_name << std::endl;
+    std::string fname = "./data/kn"+ kn_name + "/" + std::to_string(nstep) + ".csv";
+    std::ofstream ofs(fname, std::ios::out | std::ios::trunc);
+    for(int i = 0; i<Part.v.size(); i++){
+        ofs << Part.v[i][0] << "," << Part.v[i][1] << "," << Part.v[i][2] << std::endl;
+    }
 }
