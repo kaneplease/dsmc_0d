@@ -1,23 +1,32 @@
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-x1 = pd.read_csv("cmake-build-debug/Part_init.csv", names=('x', 'y', 'z'))
-x2 = pd.read_csv("cmake-build-debug/Part_fin.csv", names=('x', 'y', 'z'))
+def create_pics(datadir, picdir, num):
+	x1 = pd.read_csv(datadir+str(num)+".csv", names=('x', 'y', 'z'))
 
-# x1 = x1.T
-# x1 = x1.values
-# x2 = x2.T
-# x2 = x2.values
+	edges = np.linspace(-6,6,200)
 
-plt.xlabel("Z-Velocity")
-plt.ylabel("Frequency")
-plt.hist(x1['z'].values, bins = 100)
-plt.savefig("Init_z.png")
-plt.show()
+	plt.ylabel("Velocity Distribution Function[]")
+	plt.xlabel("Velocity[]")
+	plt.ylim(0, 21000)
+	plt.hist(x1['x'].values, bins = edges, alpha=0.5, label="vx")
 
-plt.xlabel("Y-Velocity")
-plt.ylabel("Frequency")
-plt.hist(x2['y'].values, bins = 100)
-plt.savefig("Fin_y.png")
-plt.show()
+	plt.hist(x1['y'].values, bins = edges, alpha=0.5,label="vy")
+
+	plt.hist(x1['z'].values, bins = edges, alpha=0.5,label="vz")
+	# plt.savefig("Init_z.png")
+	plt.legend()
+	plt.savefig(picdir+str(num)+".png")
+	plt.close()
+	# plt.show()
+
+def main():
+	datadir = "cmake-build-debug/data/kn04/"
+	picdir = "cmake-build-debug/pics/"
+	for i in range(81):
+		create_pics(datadir, picdir, i)
+
+if __name__=='__main__':
+	main()

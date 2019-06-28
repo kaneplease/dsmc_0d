@@ -4,11 +4,11 @@
 #include "MyDSMC.h"
 
 int main () {
-    //nlast=80 で完全に収束
-    int nlast = 100;
+    //nlast=50 で完全に収束
+    int nlast = 80;
 
     //  各knに応じた
-    for(int kn = 1; kn < 10; kn ++){
+    for(int kn = 4; kn < 5; kn ++){
         double kn_d = static_cast<double>(kn)/10.0;
         particles Part;
         MyDSMC DSMC_0d(Part, kn_d);

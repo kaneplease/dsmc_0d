@@ -30,9 +30,9 @@ MyDSMC::MyDSMC (particles& Part, double kn) {
     double dtv = (d*fmin(dx, dy) / (v0 + sqrt(2.0*rgas*t0))) / tref;
     double dtc = 0.2*akn;
 
-    dt = fmin(dtv, dtc);
+    dt = fmin(dtv, dtc)*0.1;
     std::cout << "dt: " << dt << std::endl;
-    ns = 5000000;
+    ns = 500000;
 
     col = fgmax*dt / (4.0*area * static_cast<double>(ns)*akn);
 
@@ -42,6 +42,13 @@ MyDSMC::MyDSMC (particles& Part, double kn) {
     for (int i=0; i<Part.v.size(); i++){
         Part.v[i].resize(3);
     }
+
+//    init1(Part);
+    init2(Part);
+    //init3(Part);
+}
+
+void MyDSMC::init1(particles& Part){
     //確率密度関数
     //2*vrefまでの大きさの速度が一様に分布
     //F=1/2*x よって
@@ -49,6 +56,48 @@ MyDSMC::MyDSMC (particles& Part, double kn) {
         Part.v[i][0] = 2 * uniform_random();
         Part.v[i][1] = 0;
         Part.v[i][2] = 0;
+    }
+}
+
+void MyDSMC::init2(particles& Part){
+    std::random_device seed_gen;
+    std::default_random_engine engine(seed_gen());
+
+    // 平均0.0、標準偏差1.0で分布させる
+    std::normal_distribution<> dist_x(0.0, 1.0);
+    std::normal_distribution<> dist_y(0.0, 1.5);
+    std::normal_distribution<> dist_z(0.0, 2.0);
+
+    for(int i = 0; i<Part.v.size(); i++){
+        Part.v[i][0] = dist_x(engine);
+        Part.v[i][1] = dist_y(engine);
+        Part.v[i][2] = dist_z(engine);
+    }
+}
+
+void MyDSMC::init3(particles& Part){
+    std::random_device seed_gen;
+    std::default_random_engine engine(seed_gen());
+
+    std::normal_distribution<> dist_x_m(-1.0, 0.4);
+    std::normal_distribution<> dist_y_m(-1.0, 0.4);
+    std::normal_distribution<> dist_z_m(-1.0, 0.4);
+
+    std::normal_distribution<> dist_x_p(1.0, 0.4);
+    std::normal_distribution<> dist_y_p(1.0, 0.4);
+    std::normal_distribution<> dist_z_p(1.0, 0.4);
+
+    for (int i = 0; i < Part.v.size(); i++) {
+        if (uniform_random() < 0.5){
+            Part.v[i][0] = dist_x_m(engine);
+            Part.v[i][1] = dist_y_m(engine);
+            Part.v[i][2] = dist_z_m(engine);
+        }
+        else{
+            Part.v[i][0] = dist_x_p(engine);
+            Part.v[i][1] = dist_y_p(engine);
+            Part.v[i][2] = dist_z_p(engine);
+        }
     }
 }
 

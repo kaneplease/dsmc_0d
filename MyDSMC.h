@@ -28,6 +28,9 @@ private:
     double akn;     //クヌーセン数
 
     double uniform_random();
+    void init1(particles& Part);
+    void init2(particles& Part);
+    void init3(particles& Part);
 };
 
 
