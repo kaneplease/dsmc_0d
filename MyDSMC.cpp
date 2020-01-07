@@ -31,8 +31,8 @@ MyDSMC::MyDSMC (particles& Part, double kn) {
     double dtc = 0.2*akn;
 
     dt = fmin(dtv, dtc)*0.1;
-    std::cout << "dt: " << dt << std::endl;
-    ns = 500000;
+    std::cout << "dt: " << dt*tref << std::endl;
+    ns = 10000000;
 
     col = fgmax*dt / (4.0*area * static_cast<double>(ns)*akn);
 
@@ -44,8 +44,8 @@ MyDSMC::MyDSMC (particles& Part, double kn) {
     }
 
 //    init1(Part);
-    init2(Part);
-    //init3(Part);
+    //init2(Part);
+    init3(Part);
 }
 
 void MyDSMC::init1(particles& Part){
@@ -186,6 +186,6 @@ void MyDSMC::output_data(int nstep, particles Part){
     std::string fname = "./data/kn"+ kn_name + "/" + std::to_string(nstep) + ".csv";
     std::ofstream ofs(fname, std::ios::out | std::ios::trunc);
     for(int i = 0; i<Part.v.size(); i++){
-        ofs << Part.v[i][0] << "," << Part.v[i][1] << "," << Part.v[i][2] << std::endl;
+        ofs << Part.v[i][0]*vref << "," << Part.v[i][1]*vref << "," << Part.v[i][2]*vref << std::endl;
     }
 }

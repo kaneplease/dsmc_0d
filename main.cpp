@@ -5,7 +5,7 @@
 
 int main () {
     //nlast=50 で完全に収束
-    int nlast = 80;
+    int nlast = 100;
 
     //  各knに応じた
     for(int kn = 4; kn < 5; kn ++){
