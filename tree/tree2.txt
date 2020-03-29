@@ -1,0 +1,36 @@
+dsmc_0d/
+├── build
+│   ├── CMakeFiles
+│   │   ├── 3.14.20190427-ga9c11
+│   │   │   ├── CompilerIdC
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       └── tmp
+│   │   ├── CMakeTmp
+│   │   └── dsmc_0d.dir
+│   └── data
+│       ├── kn04
+│       └── pics
+├── cmake-build-debug
+│   ├── CMakeFiles
+│   │   ├── 3.12.3
+│   │   │   ├── CompilerIdC
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       └── tmp
+│   │   ├── CMakeTmp
+│   │   └── dsmc_0d.dir
+│   ├── data
+│   │   ├── kn01
+│   │   ├── kn02
+│   │   ├── kn03
+│   │   ├── kn04
+│   │   ├── kn05
+│   │   ├── kn06
+│   │   ├── kn07
+│   │   ├── kn08
+│   │   └── kn09
+│   └── pics
+└── tree
+
+

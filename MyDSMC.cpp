@@ -32,7 +32,7 @@ MyDSMC::MyDSMC (particles& Part, double kn) {
 
     dt = fmin(dtv, dtc)*0.1;
     std::cout << "dt: " << dt*tref << std::endl;
-    ns = 10000000;
+    ns = 50000000;
 
     col = fgmax*dt / (4.0*area * static_cast<double>(ns)*akn);
 
@@ -45,7 +45,8 @@ MyDSMC::MyDSMC (particles& Part, double kn) {
 
 //    init1(Part);
     //init2(Part);
-    init3(Part);
+    //init3(Part);
+    init4(Part);
 }
 
 void MyDSMC::init1(particles& Part){
@@ -82,6 +83,32 @@ void MyDSMC::init3(particles& Part){
     std::normal_distribution<> dist_x_m(-1.0, 0.4);
     std::normal_distribution<> dist_y_m(-1.0, 0.4);
     std::normal_distribution<> dist_z_m(-1.0, 0.4);
+
+    std::normal_distribution<> dist_x_p(1.0, 0.4);
+    std::normal_distribution<> dist_y_p(1.0, 0.4);
+    std::normal_distribution<> dist_z_p(1.0, 0.4);
+
+    for (int i = 0; i < Part.v.size(); i++) {
+        if (uniform_random() < 0.5){
+            Part.v[i][0] = dist_x_m(engine);
+            Part.v[i][1] = dist_y_m(engine);
+            Part.v[i][2] = dist_z_m(engine);
+        }
+        else{
+            Part.v[i][0] = dist_x_p(engine);
+            Part.v[i][1] = dist_y_p(engine);
+            Part.v[i][2] = dist_z_p(engine);
+        }
+    }
+}
+
+void MyDSMC::init4(particles& Part){
+    std::random_device seed_gen;
+    std::default_random_engine engine(seed_gen());
+
+    std::normal_distribution<> dist_x_m(-2.0, 0.4);
+    std::normal_distribution<> dist_y_m(-2.0, 0.4);
+    std::normal_distribution<> dist_z_m(-2.0, 0.4);
 
     std::normal_distribution<> dist_x_p(1.0, 0.4);
     std::normal_distribution<> dist_y_p(1.0, 0.4);

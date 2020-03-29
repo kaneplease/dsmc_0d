@@ -1,0 +1,301 @@
+dsmc_0d/
+├── build
+│   ├── CMakeCache.txt
+│   ├── CMakeFiles
+│   │   ├── 3.14.20190427-ga9c11
+│   │   │   ├── CMakeCCompiler.cmake
+│   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   ├── CMakeSystem.cmake
+│   │   │   ├── CompilerIdC
+│   │   │   │   ├── a.out
+│   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       ├── a.out
+│   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │       └── tmp
+│   │   ├── cmake.check_cache
+│   │   ├── CMakeDirectoryInformation.cmake
+│   │   ├── CMakeOutput.log
+│   │   ├── CMakeTmp
+│   │   ├── dsmc_0d.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── CXX.includecache
+│   │   │   ├── DependInfo.cmake
+│   │   │   ├── depend.internal
+│   │   │   ├── depend.make
+│   │   │   ├── flags.make
+│   │   │   ├── link.txt
+│   │   │   ├── main.cpp.o
+│   │   │   ├── MyDSMC.cpp.o
+│   │   │   ├── particles.cpp.o
+│   │   │   └── progress.make
+│   │   ├── feature_tests.bin
+│   │   ├── feature_tests.cxx
+│   │   ├── Makefile2
+│   │   ├── Makefile.cmake
+│   │   ├── progress.marks
+│   │   └── TargetDirectories.txt
+│   ├── cmake_install.cmake
+│   ├── data
+│   │   ├── kn04
+│   │   │   ├── 0.csv
+│   │   │   ├── 100.csv
+│   │   │   ├── 10.csv
+│   │   │   ├── 11.csv
+│   │   │   ├── 12.csv
+│   │   │   ├── 13.csv
+│   │   │   ├── 14.csv
+│   │   │   ├── 15.csv
+│   │   │   ├── 16.csv
+│   │   │   ├── 17.csv
+│   │   │   ├── 18.csv
+│   │   │   ├── 19.csv
+│   │   │   ├── 1.csv
+│   │   │   ├── 20.csv
+│   │   │   ├── 21.csv
+│   │   │   ├── 22.csv
+│   │   │   ├── 23.csv
+│   │   │   ├── 24.csv
+│   │   │   ├── 25.csv
+│   │   │   ├── 26.csv
+│   │   │   ├── 27.csv
+│   │   │   ├── 28.csv
+│   │   │   ├── 29.csv
+│   │   │   ├── 2.csv
+│   │   │   ├── 30.csv
+│   │   │   ├── 31.csv
+│   │   │   ├── 32.csv
+│   │   │   ├── 33.csv
+│   │   │   ├── 34.csv
+│   │   │   ├── 35.csv
+│   │   │   ├── 36.csv
+│   │   │   ├── 37.csv
+│   │   │   ├── 38.csv
+│   │   │   ├── 39.csv
+│   │   │   ├── 3.csv
+│   │   │   ├── 40.csv
+│   │   │   ├── 41.csv
+│   │   │   ├── 42.csv
+│   │   │   ├── 43.csv
+│   │   │   ├── 44.csv
+│   │   │   ├── 45.csv
+│   │   │   ├── 46.csv
+│   │   │   ├── 47.csv
+│   │   │   ├── 48.csv
+│   │   │   ├── 49.csv
+│   │   │   ├── 4.csv
+│   │   │   ├── 50.csv
+│   │   │   ├── 51.csv
+│   │   │   ├── 52.csv
+│   │   │   ├── 53.csv
+│   │   │   ├── 54.csv
+│   │   │   ├── 55.csv
+│   │   │   ├── 56.csv
+│   │   │   ├── 57.csv
+│   │   │   ├── 58.csv
+│   │   │   ├── 59.csv
+│   │   │   ├── 5.csv
+│   │   │   ├── 60.csv
+│   │   │   ├── 61.csv
+│   │   │   ├── 62.csv
+│   │   │   ├── 63.csv
+│   │   │   ├── 64.csv
+│   │   │   ├── 65.csv
+│   │   │   ├── 66.csv
+│   │   │   ├── 67.csv
+│   │   │   ├── 68.csv
+│   │   │   ├── 69.csv
+│   │   │   ├── 6.csv
+│   │   │   ├── 70.csv
+│   │   │   ├── 71.csv
+│   │   │   ├── 72.csv
+│   │   │   ├── 73.csv
+│   │   │   ├── 74.csv
+│   │   │   ├── 75.csv
+│   │   │   ├── 76.csv
+│   │   │   ├── 77.csv
+│   │   │   ├── 78.csv
+│   │   │   ├── 79.csv
+│   │   │   ├── 7.csv
+│   │   │   ├── 80.csv
+│   │   │   ├── 81.csv
+│   │   │   ├── 82.csv
+│   │   │   ├── 83.csv
+│   │   │   ├── 84.csv
+│   │   │   ├── 85.csv
+│   │   │   ├── 86.csv
+│   │   │   ├── 87.csv
+│   │   │   ├── 88.csv
+│   │   │   ├── 89.csv
+│   │   │   ├── 8.csv
+│   │   │   ├── 90.csv
+│   │   │   ├── 91.csv
+│   │   │   ├── 92.csv
+│   │   │   ├── 93.csv
+│   │   │   ├── 94.csv
+│   │   │   ├── 95.csv
+│   │   │   ├── 96.csv
+│   │   │   ├── 97.csv
+│   │   │   ├── 98.csv
+│   │   │   ├── 99.csv
+│   │   │   └── 9.csv
+│   │   └── pics
+│   │       ├── 0.png
+│   │       ├── 10.png
+│   │       ├── 11.png
+│   │       ├── 12.png
+│   │       ├── 13.png
+│   │       ├── 14.png
+│   │       ├── 15.png
+│   │       ├── 16.png
+│   │       ├── 17.png
+│   │       ├── 18.png
+│   │       ├── 19.png
+│   │       ├── 1.png
+│   │       ├── 20.png
+│   │       ├── 21.png
+│   │       ├── 22.png
+│   │       ├── 23.png
+│   │       ├── 24.png
+│   │       ├── 25.png
+│   │       ├── 26.png
+│   │       ├── 27.png
+│   │       ├── 28.png
+│   │       ├── 29.png
+│   │       ├── 2.png
+│   │       ├── 30.png
+│   │       ├── 31.png
+│   │       ├── 32.png
+│   │       ├── 33.png
+│   │       ├── 34.png
+│   │       ├── 35.png
+│   │       ├── 36.png
+│   │       ├── 37.png
+│   │       ├── 38.png
+│   │       ├── 39.png
+│   │       ├── 3.png
+│   │       ├── 40.png
+│   │       ├── 41.png
+│   │       ├── 42.png
+│   │       ├── 43.png
+│   │       ├── 44.png
+│   │       ├── 45.png
+│   │       ├── 46.png
+│   │       ├── 47.png
+│   │       ├── 48.png
+│   │       ├── 49.png
+│   │       ├── 4.png
+│   │       ├── 50.png
+│   │       ├── 51.png
+│   │       ├── 52.png
+│   │       ├── 53.png
+│   │       ├── 54.png
+│   │       ├── 55.png
+│   │       ├── 56.png
+│   │       ├── 57.png
+│   │       ├── 58.png
+│   │       ├── 59.png
+│   │       ├── 5.png
+│   │       ├── 60.png
+│   │       ├── 61.png
+│   │       ├── 62.png
+│   │       ├── 63.png
+│   │       ├── 64.png
+│   │       ├── 65.png
+│   │       ├── 66.png
+│   │       ├── 67.png
+│   │       ├── 68.png
+│   │       ├── 69.png
+│   │       ├── 6.png
+│   │       ├── 70.png
+│   │       ├── 71.png
+│   │       ├── 72.png
+│   │       ├── 73.png
+│   │       ├── 74.png
+│   │       ├── 75.png
+│   │       ├── 76.png
+│   │       ├── 77.png
+│   │       ├── 78.png
+│   │       ├── 79.png
+│   │       ├── 7.png
+│   │       ├── 80.png
+│   │       ├── 8.png
+│   │       └── 9.png
+│   ├── dsmc_0d
+│   └── Makefile
+├── cmake-build-debug
+│   ├── CMakeFiles
+│   │   ├── 3.12.3
+│   │   │   ├── CMakeCCompiler.cmake
+│   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   ├── CMakeSystem.cmake
+│   │   │   ├── CompilerIdC
+│   │   │   │   ├── a.out
+│   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       ├── a.out
+│   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │       └── tmp
+│   │   ├── clion-environment.txt
+│   │   ├── clion-log.txt
+│   │   ├── cmake.check_cache
+│   │   ├── CMakeDirectoryInformation.cmake
+│   │   ├── CMakeOutput.log
+│   │   ├── CMakeTmp
+│   │   ├── dsmc_0d.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── CXX.includecache
+│   │   │   ├── DependInfo.cmake
+│   │   │   ├── depend.internal
+│   │   │   ├── depend.make
+│   │   │   ├── flags.make
+│   │   │   ├── link.txt
+│   │   │   ├── main.cpp.o
+│   │   │   ├── MyDSMC.cpp.o
+│   │   │   ├── particles.cpp.o
+│   │   │   └── progress.make
+│   │   ├── feature_tests.bin
+│   │   ├── feature_tests.c
+│   │   ├── feature_tests.cxx
+│   │   ├── Makefile2
+│   │   ├── Makefile.cmake
+│   │   ├── progress.marks
+│   │   └── TargetDirectories.txt
+│   ├── cmake_install.cmake
+│   ├── data
+│   │   ├── _DS_Store
+│   │   ├── kn01
+│   │   │   └── _DS_Store
+│   │   ├── kn02
+│   │   ├── kn03
+│   │   ├── kn04
+│   │   ├── kn05
+│   │   ├── kn06
+│   │   ├── kn07
+│   │   ├── kn08
+│   │   └── kn09
+│   ├── dsmc_0d
+│   ├── dsmc_0d.cbp
+│   ├── hist_data.py
+│   ├── Makefile
+│   ├── Part_fin.csv
+│   ├── Part_init.csv
+│   └── pics
+│       └── 0.png
+├── CMakeLists.txt
+├── main.cpp
+├── MyDSMC.cpp
+├── MyDSMC.h
+├── particles.cpp
+├── particles.h
+├── tree
+└── vis_histo.py
+

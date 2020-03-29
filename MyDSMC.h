@@ -31,6 +31,7 @@ private:
     void init1(particles& Part);
     void init2(particles& Part);
     void init3(particles& Part);
+    void init4(particles& Part);
 };
 
 

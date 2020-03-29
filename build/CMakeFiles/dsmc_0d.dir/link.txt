@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/dsmc_0d.dir/main.cpp.o CMakeFiles/dsmc_0d.dir/particles.cpp.o CMakeFiles/dsmc_0d.dir/MyDSMC.cpp.o  -o dsmc_0d 

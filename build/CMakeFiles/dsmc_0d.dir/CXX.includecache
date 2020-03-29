@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/user/HDD/hattori/dsmc_0d/MyDSMC.h
+particles.h
+/media/user/HDD/hattori/dsmc_0d/particles.h
+
+/media/user/HDD/hattori/dsmc_0d/main.cpp
+iostream
+-
+fstream
+-
+particles.h
+/media/user/HDD/hattori/dsmc_0d/particles.h
+MyDSMC.h
+/media/user/HDD/hattori/dsmc_0d/MyDSMC.h
+
+/media/user/HDD/hattori/dsmc_0d/particles.h
+vector
+-
+
